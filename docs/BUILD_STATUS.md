@@ -5,7 +5,7 @@ Checked 2026-10-10 against source commit afc8c30 (before this documentation-only
 ## Verified locally
 
 - Clean npm ci succeeded.
-- npm test passed 4/4 tests: mocked lookup/search contract and server construction. These are not real KnowFirm account or production API calls.
+- npm test passed 4/4 tests: missing-key refusal, fixed-origin/encoded lookup request, safe provider failure and server construction. No dedicated business_search handler case is present. These are not real KnowFirm account or production API calls.
 - npm pack --dry-run succeeded and listed five packaged files: index.mjs, README.md, LICENSE, manifest.json and package.json. No credential file is included.
 - This package is a Node stdio MCP client with business_lookup and business_search; no standalone web build or deployment is defined in package.json.
 
