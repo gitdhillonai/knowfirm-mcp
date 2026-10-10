@@ -1,0 +1,14 @@
+{
+  "name": "@persooninc/knowfirm-mcp",
+  "version": "0.1.0",
+  "description": "KnowFirm business lookup and search tools for MCP clients. Bring your own KnowFirm API key.",
+  "type": "module",
+  "bin": { "knowfirm-mcp": "index.mjs" },
+  "files": ["index.mjs", "README.md"],
+  "license": "MIT",
+  "mcpName": "io.github.gitdhillonai/knowfirm",
+  "homepage": "https://knowfirm.com/docs",
+  "engines": { "node": ">=20" },
+  "scripts": { "test": "node --test test.mjs" },
+  "dependencies": { "@modelcontextprotocol/sdk": "^1.0.0", "zod": "^3.24.0" }
+}

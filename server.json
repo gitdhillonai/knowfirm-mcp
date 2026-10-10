@@ -1,0 +1,13 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.gitdhillonai/knowfirm",
+  "title": "KnowFirm",
+  "description": "U.S. business lookup and search via KnowFirm. Bring your own API key; each call uses 1 credit.",
+  "version": "0.1.0",
+  "repository": { "url": "https://github.com/gitdhillonai/knowfirm.com", "source": "github" },
+  "packages": [{
+    "registryType": "npm", "identifier": "@persooninc/knowfirm-mcp", "version": "0.1.0",
+    "transport": { "type": "stdio" },
+    "environmentVariables": [{ "name": "KNOWFIRM_API_KEY", "description": "Your own key from the KnowFirm dashboard", "isRequired": true, "isSecret": true, "format": "string" }]
+  }]
+}
