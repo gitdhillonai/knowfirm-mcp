@@ -4,10 +4,18 @@
   "title": "KnowFirm",
   "description": "U.S. business lookup and search via KnowFirm. Bring your own API key; each call uses 1 credit.",
   "version": "0.1.0",
-  "repository": { "url": "https://github.com/gitdhillonai/knowfirm.com", "source": "github" },
-  "packages": [{
-    "registryType": "npm", "identifier": "@persooninc/knowfirm-mcp", "version": "0.1.0",
-    "transport": { "type": "stdio" },
-    "environmentVariables": [{ "name": "KNOWFIRM_API_KEY", "description": "Your own key from the KnowFirm dashboard", "isRequired": true, "isSecret": true, "format": "string" }]
-  }]
+  "repository": {
+    "url": "https://github.com/gitdhillonai/knowfirm-mcp",
+    "source": "github"
+  },
+  "packages": [
+    {
+      "registryType": "mcpb",
+      "identifier": "https://github.com/gitdhillonai/knowfirm-mcp/releases/download/v0.1.0/knowfirm-mcp-0.1.0.mcpb",
+      "fileSha256": "4a8f21994b010021ee164239e6544846c43f8d14acfd1da21e85596ea5bd26ca",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
 }

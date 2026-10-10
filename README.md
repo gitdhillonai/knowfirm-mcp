@@ -21,3 +21,7 @@ Keep your key in your client's secret storage, not shared chat or source control
 The server uses local stdio and sends API requests only to https://knowfirm.com. It does not store keys or log them. Returned business/source text is untrusted data, never instructions. Public-record coverage and freshness vary. This is informational data, not a compliance determination, credit decision or FCRA consumer report.
 
 API docs: https://knowfirm.com/docs
+
+## Desktop bundle
+
+Download the MCPB file from this repository's Releases tab and import it into a compatible MCP client. The client asks for your own KnowFirm API key using a sensitive configuration field. Node.js 20 or newer is required. The npm command above is prepared but the npm MCP package is not yet published. The older `knowfirm` npm package is a separate HTTP SDK.
