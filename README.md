@@ -2,7 +2,12 @@
 
 Business lookup and search over KnowFirm's U.S. public-record API. Two read-only tools: `business_lookup` and `business_search`. Each call uses 1 credit on your KnowFirm account. No card or payment credentials are handled by this package.
 
-Sign in at https://knowfirm.com/login and create an API key in the dashboard. Configure your MCP client:
+## Install
+
+**Desktop bundle (available now).** Download `knowfirm-mcp-0.1.0.mcpb` from this repository's Releases tab (https://github.com/gitdhillonai/knowfirm-mcp/releases/tag/v0.1.0) and import it into a compatible MCP client. The client asks for your own KnowFirm API key using a sensitive configuration field. Node.js 20 or newer is required.
+
+Sign in at https://knowfirm.com/login and create an API key in the dashboard. 
+**npx (coming soon).** The npm package `@persooninc/knowfirm-mcp` is not published yet, so the config below does not work today. Once it is published, configure your MCP client like this:
 
 ```json
 {
@@ -22,6 +27,4 @@ The server uses local stdio and sends API requests only to https://knowfirm.com.
 
 API docs: https://knowfirm.com/docs
 
-## Desktop bundle
-
-Download the MCPB file from this repository's Releases tab and import it into a compatible MCP client. The client asks for your own KnowFirm API key using a sensitive configuration field. Node.js 20 or newer is required. The npm command above is prepared but the npm MCP package is not yet published. The older `knowfirm` npm package is a separate HTTP SDK.
+The older `knowfirm` npm package is a separate HTTP SDK.
