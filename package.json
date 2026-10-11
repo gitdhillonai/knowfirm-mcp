@@ -1,5 +1,5 @@
 {
-  "name": "@persooninc/knowfirm-mcp",
+  "name": "@knowfirm/knowfirm-mcp",
   "version": "0.1.0",
   "description": "KnowFirm business lookup and search tools for MCP clients. Bring your own KnowFirm API key.",
   "type": "module",

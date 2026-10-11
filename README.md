@@ -6,15 +6,16 @@ Business lookup and search over KnowFirm's U.S. public-record API. Two read-only
 
 **Desktop bundle (available now).** Download `knowfirm-mcp-0.1.0.mcpb` from this repository's Releases tab (https://github.com/gitdhillonai/knowfirm-mcp/releases/tag/v0.1.0) and import it into a compatible MCP client. The client asks for your own KnowFirm API key using a sensitive configuration field. Node.js 20 or newer is required.
 
-Sign in at https://knowfirm.com/login and create an API key in the dashboard. 
-**npx (coming soon).** The npm package `@persooninc/knowfirm-mcp` is not published yet, so the config below does not work today. Once it is published, configure your MCP client like this:
+Sign in at https://knowfirm.com/login and create an API key in the dashboard.
+
+**npx.** Configure your MCP client like this:
 
 ```json
 {
   "mcpServers": {
     "knowfirm": {
       "command": "npx",
-      "args": ["-y", "@persooninc/knowfirm-mcp@0.1.0"],
+      "args": ["-y", "@knowfirm/knowfirm-mcp"],
       "env": {"KNOWFIRM_API_KEY": "YOUR_OWN_KEY"}
     }
   }
