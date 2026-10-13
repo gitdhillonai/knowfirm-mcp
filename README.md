@@ -4,11 +4,56 @@ Business lookup and search over KnowFirm's U.S. public-record API. Two read-only
 
 ## Install
 
-**Desktop bundle (available now).** Download `knowfirm-mcp-0.1.0.mcpb` from this repository's Releases tab (https://github.com/gitdhillonai/knowfirm-mcp/releases/tag/v0.1.0) and import it into a compatible MCP client. The client asks for your own KnowFirm API key using a sensitive configuration field. Node.js 20 or newer is required.
+Node.js 20 or newer. Sign in at https://knowfirm.com/login and create an API key in the dashboard. Put the key only in the client's secret or env field.
 
-Sign in at https://knowfirm.com/login and create an API key in the dashboard.
+Published package: `@knowfirm/knowfirm-mcp` on npm, version 0.1.0. Desktop bundle: `knowfirm-mcp-0.1.0.mcpb` on the v0.1.0 GitHub release (https://github.com/gitdhillonai/knowfirm-mcp/releases/tag/v0.1.0).
 
-**npx.** Configure your MCP client like this:
+### Claude Desktop
+
+Open **Settings → Developer → Edit Config** (macOS file: `~/Library/Application Support/Claude/claude_desktop_config.json`). Add the server and restart Claude Desktop:
+
+```json
+{
+  "mcpServers": {
+    "knowfirm": {
+      "command": "npx",
+      "args": ["-y", "@knowfirm/knowfirm-mcp"],
+      "env": {"KNOWFIRM_API_KEY": "YOUR_OWN_KEY"}
+    }
+  }
+}
+```
+
+You can also import `knowfirm-mcp-0.1.0.mcpb`. Claude asks for the API key in the bundle's sensitive field.
+
+### Cursor
+
+Open **Cursor Settings → MCP → Add new MCP server**, or edit `~/.cursor/mcp.json` (global) or `.cursor/mcp.json` in a project:
+
+```json
+{
+  "mcpServers": {
+    "knowfirm": {
+      "command": "npx",
+      "args": ["-y", "@knowfirm/knowfirm-mcp"],
+      "env": {"KNOWFIRM_API_KEY": "YOUR_OWN_KEY"}
+    }
+  }
+}
+```
+
+Reload MCP servers from the same settings page. The tools appear as `business_lookup` and `business_search`.
+
+### MCP Registry
+
+The server is listed as `io.github.gitdhillonai/knowfirm` (stdio, npm package `@knowfirm/knowfirm-mcp` 0.1.0, plus the MCPB file).
+
+- Registry record: https://registry.modelcontextprotocol.io/v0.1/servers/io.github.gitdhillonai%2Fknowfirm/versions/0.1.0
+- Source manifest in this repo: `server.json`
+
+Clients that install from the registry still need your own `KNOWFIRM_API_KEY`. This repo does not publish new versions from routine doc updates.
+
+### Generic npx
 
 ```json
 {
